@@ -1,0 +1,22 @@
+/*
+Partie mise en place de la barre de thème
+ */
+nav {
+	display: inline-block;
+	width:20%;
+	border-right:1px solid black;
+	height:100%;
+}
+
+
+/*
+Partie mise en place de la mosaique de vidéo
+ */
+#mosaic {
+	vertical-align:top;
+	display:inline-block;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width:75%;
+	overflow:hidden;
+}
