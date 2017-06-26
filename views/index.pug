@@ -1,0 +1,39 @@
+doctype html
+html
+	head
+		title= title
+		link(href="https://fonts.googleapis.com/css?family=Baloo+Thambi|Nunito+Sans",rel="stylesheet")
+		link(rel='stylesheet',href='/stylesheets/global.css')
+	body
+		header
+			h1#greatTitle
+				a(href="/index") Tubegether
+			input#searchArea(type="text")
+			button#searchVideo Search
+			if connected
+				button.normBut.headerRightBut#openAccHeaWin Welcome #{pseudo}
+			else
+				button.normBut.headerRightBut#openSignWin Sign In/Sign up
+		div#accountHeaderWin.headerMenuWin(style="display:none;")
+			a(href="account").normBut.heaMeBut Account
+			a(href="/user/video").normBut.heaMeBut My Videos
+			a(href="/user/deco").normBut.heaMeBut Deconnexion
+		div#signWin.headerMenuWin(style="display:none")
+			button.normBut#openBigSignInWin Sign In
+			h3 Sign Up : 
+			form(action="connection",method="post")
+				label(for="pseudo") Pseudo : 
+				input(type="text",name="pseudo",id="pseudo")
+				label(for="password") Password : 
+				input(type="password",name="password",id="password")
+				button Sign Up
+			form(action="inscription",method="post")
+				label(for="pseudo") Pseudo : 
+				input(type="text",name="pseudo",id="pseudo")
+				label(for="password") Mot de passe : 
+				input(type="password",name="password",id="password")
+				label(for="password2") Retaper le mot de passe
+				input(type="password",name="password2",id="password2")
+				button Sign In
+		nav
+		section
