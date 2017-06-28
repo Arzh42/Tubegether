@@ -1,0 +1,49 @@
+doctype html
+html
+	head
+		title= title
+		script(type="text/javascript",src="/javascripts/index.js")
+		link(href="https://fonts.googleapis.com/css?family=Baloo+Thambi|Nunito+Sans",rel="stylesheet")
+		link(rel='stylesheet',href='/stylesheets/global.css')
+		link(rel='stylesheet',href='/stylesheets/watch.css')
+	body
+		header
+			h1#greatTitle
+				a(href="/index") Tubegether
+			input#searchArea(type="text")
+			button#searchVideo Search
+			// Retirer les commentaires ici pour passer à la version avec connexion
+			//if connected
+			button.normBut.headerRightBut#openAccHeaWin Welcome #{pseudo}
+			//else
+			button.normBut.headerRightBut#openSignWin Sign In/Sign up
+		div#accountHeaderWin.headerMenuWin(style="display:none;")
+			a(href="/user/account").normBut.heaMeBut Account
+			a(href="/user/video").normBut.heaMeBut My Videos
+			a(href="/user/deco").normBut.heaMeBut Deconnexion
+		div#signWin.headerMenuWin(style="display:none")
+			button.normBut#openBigSignInWin Sign In
+			h3 Sign Up : 
+			form(action="connection",method="post")
+				label(for="pseudo") Pseudo : 
+				input(type="text",name="pseudo",id="pseudo")
+				label(for="password") Password : 
+				input(type="password",name="password",id="password")
+				button Sign Up
+			form(action="inscription",method="post")
+				label(for="pseudo") Pseudo : 
+				input(type="text",name="pseudo",id="pseudo")
+				label(for="password") Mot de passe : 
+				input(type="password",name="password",id="password")
+				label(for="password2") Retaper le mot de passe
+				input(type="password",name="password2",id="password2")
+				button Sign In
+		section#videoContainer
+			if (typeVideo=="Youtube")
+				div.player#youtubePlayer
+					iframe(id="ytplayer",type="text/html",width="720",height="405",src="https://www.youtube.com/embed/"+codeVideo,frameborder="0",allowfullscreen)
+			div.titleArea
+				h1= titreVideo
+				h2 By Nom de l'auteur
+			div#descriptionArea Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		footer
