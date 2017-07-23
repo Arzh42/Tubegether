@@ -1,35 +1,32 @@
-#videoContainer {
-	position:absolute;
-	top:100px;
-	left:0px;
-	right:0px;
-	bottom:0px;
-	text-align: center;
-
+#videoContainer {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  text-align: center;
 }
 .player {
-	width:720px;
-	margin:auto;
-	margin-top:20px;
-
+  width: 720px;
+  margin: auto;
+  margin-top: 20px;
 }
 .titleArea {
-	width:770px;
-	margin:auto;
-	margin-top:5px;
-	text-align: center;
-
+  width: 770px;
+  margin: auto;
+  margin-top: 5px;
+  text-align: center;
 }
 #videoContainer h1 {
-	margin:5px;
-	font-size:30px;
+  margin: 5px;
+  font-size: 30px;
 }
 #videoContainer h2 {
-	margin-top:5px;
-	font-size: 15px;
+  margin-top: 5px;
+  font-size: 15px;
 }
 #descriptionArea {
-	width:720px;
-	margin:auto;
-	margin-top:20px;
+  width: 720px;
+  margin: auto;
+  margin-top: 20px;
 }
